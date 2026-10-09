@@ -4,7 +4,7 @@ name: llave-inglesa
 tagline: Pon a prueba la custodia de tus bitcoins antes de que lo haga otro
 icon: https://llave-inglesa.vualt.net/logo.svg
 category: bitcoin
-version: "0.3.1"
+version: "0.3.2"
 port: 4580
 description: >-
   Interface in Spanish only.
@@ -32,8 +32,8 @@ support: https://github.com/PrvsatsDev/llave-inglesa/issues
 gallery:
   - https://raw.githubusercontent.com/PrvsatsDev/llave-inglesa/main/docs/img/llave-inglesa.png
 releaseNotes: >-
-  Descriptor de la cartera (importar, primera dirección, PDF con QR), carta para los herederos y penalización por
-  multisig sin descriptor.
+  Primera versión en Umbrel. Incluye el descriptor de la cartera (importar, primera dirección, PDF con QR), la carta
+  para los herederos y la penalización por multisig sin descriptor.
 dependencies: []
 path: ""
 defaultUsername: ""
