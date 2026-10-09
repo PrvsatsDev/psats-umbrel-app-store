@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      # <app-id>_<servicio>_1
+      APP_HOST: psats-llave-inglesa_web_1
+      APP_PORT: 8080
+
+  web:
+    # Imagen construida desde el zip reproducible de la Release: ver umbrel/README.md en el repo de llave-inglesa.
+    image: ghcr.io/prvsatsdev/llave-inglesa:0.3.1-prueba-c0722c9@sha256:bebc30da24dfd342a33d96e67f419694adafb12dfe2d0c1a4d7e057c516e7f1b
+    restart: on-failure
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp

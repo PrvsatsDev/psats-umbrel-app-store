@@ -1,0 +1,41 @@
+manifestVersion: 1
+id: psats-llave-inglesa
+name: llave-inglesa
+tagline: Pon a prueba la custodia de tus bitcoins antes de que lo haga otro
+icon: https://llave-inglesa.vualt.net/logo.svg
+category: bitcoin
+version: "0.3.1"
+port: 4580
+description: >-
+  Interface in Spanish only.
+
+
+  Simulador offline de esquemas de custodia Bitcoin (single-sig, passphrase, multisig). Describes qué keys,
+  dispositivos y backups tienes, dónde están y quién sabe qué, y calcula las formas más baratas de robarte, qué
+  desgracias te dejarían sin fondos, a cuántos sitios tienes que ir para firmar y si tus herederos llegarían a los
+  fondos, explicando siempre por qué. También genera el descriptor de tu cartera (con la primera dirección para
+  comprobarlo), un PDF con su QR y una carta para tus herederos.
+
+
+  Nunca escribas frases semilla, claves privadas ni passphrases reales: no hacen falta. La app no puede hacer ninguna
+  petición de red, y tu esquema se guarda cifrado en el navegador.
+
+
+  Requiere umbrelOS 2.0 o posterior: se abre por HTTPS con el certificado de tu Umbrel (el navegador puede avisar la
+  primera vez), porque el cifrado del navegador solo funciona en un contexto seguro.
+developer: Psats
+website: https://llave-inglesa.vualt.net
+submitter: Psats
+submission: https://github.com/PrvsatsDev/psats-umbrel-app-store
+repo: https://github.com/PrvsatsDev/llave-inglesa
+support: https://github.com/PrvsatsDev/llave-inglesa/issues
+gallery:
+  - https://raw.githubusercontent.com/PrvsatsDev/llave-inglesa/main/docs/img/llave-inglesa.png
+releaseNotes: >-
+  Descriptor de la cartera (importar, primera dirección, PDF con QR), carta para los herederos y penalización por
+  multisig sin descriptor.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+requiresHttps: true
