@@ -13,8 +13,13 @@ Tienda comunitaria de [Umbrel](https://umbrel.com) con las apps de Psats.
 En la App Store de umbrelOS, abre las tiendas comunitarias (*Community App Stores*), pega la URL de este repositorio
 (`https://github.com/PrvsatsDev/psats-umbrel-app-store`) y añádela.
 
-llave-inglesa necesita **umbrelOS 2.0 o posterior**: se abre por HTTPS con el certificado de tu Umbrel (el navegador
-puede avisar la primera vez), porque el cifrado del navegador solo funciona en un contexto seguro.
+llave-inglesa necesita **umbrelOS 2.0 o posterior**: se abre por HTTPS (`https://umbrel.local:4580`), porque el
+cifrado del navegador solo funciona en un contexto seguro.
+
+La primera vez, el navegador avisará de que la conexión **no es segura**: no conoce el certificado de tu Umbrel. La
+conexión sí va cifrada. Para pasar: en Chrome, Edge o Brave, *Configuración avanzada → Acceder a umbrel.local (sitio no
+seguro)*; en Firefox, *Avanzado… → Aceptar el riesgo y continuar*. Para que no avise más, instala el certificado de tu
+Umbrel como de confianza en tu equipo.
 
 ## Verificar la imagen
 
