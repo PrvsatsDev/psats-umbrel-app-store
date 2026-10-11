@@ -1,10 +1,10 @@
-manifestVersion: 1
+manifestVersion: 2.0
 id: psats-llave-inglesa
 name: llave-inglesa
 tagline: Put your bitcoin custody to the test before someone else does
 icon: https://llave-inglesa.vualt.net/logo.svg
 category: bitcoin
-version: "0.4.0"
+version: "0.4.1"
 port: 4580
 description: >-
   Offline simulator of Bitcoin custody setups (single-sig, passphrase, multisig). You describe which keys, devices
@@ -18,8 +18,10 @@ description: >-
   request, and your setup is stored encrypted in the browser.
 
 
-  Requires umbrelOS 2.0 or later: it opens over HTTPS with your Umbrel's certificate (the browser may warn you the
-  first time), because the browser's encryption only works in a secure context.
+  Requires umbrelOS 2.0 or later: it opens over HTTPS, because the browser's encryption only works in a secure
+  context. The browser will warn about Umbrel's certificate unless you install and trust it on each device: Umbrel
+  explains how, and its risks, under **Settings → Advanced settings → Network**. The connection is encrypted either
+  way. Opened over plain HTTP, everything works except saving or opening encrypted setups.
 
 
   Interface in English and Spanish (detected from the browser, switchable with ES | EN).
@@ -39,8 +41,11 @@ description: >-
   petición de red, y tu esquema se guarda cifrado en el navegador.
 
 
-  Requiere umbrelOS 2.0 o posterior: se abre por HTTPS con el certificado de tu Umbrel (el navegador puede avisar la
-  primera vez), porque el cifrado del navegador solo funciona en un contexto seguro.
+  Requiere umbrelOS 2.0 o posterior: se abre por HTTPS, porque el cifrado del navegador solo funciona en un contexto
+  seguro. El navegador avisará del certificado de Umbrel salvo que lo instales como de confianza en cada equipo:
+  Umbrel explica cómo, y sus riesgos, en **Configuración avanzada → Red → Cómo usar HTTPS → Configuración avanzada del
+  certificado**. La conexión va cifrada de todos modos. Abierta por HTTP, funciona todo salvo guardar o abrir esquemas
+  cifrados.
 developer: Psats
 website: https://llave-inglesa.vualt.net
 submitter: Psats
@@ -50,13 +55,10 @@ support: https://github.com/PrvsatsDev/llave-inglesa/issues
 gallery:
   - https://raw.githubusercontent.com/PrvsatsDev/llave-inglesa/main/docs/img/llave-inglesa.png
 releaseNotes: >-
-  The app, the guide and the examples are now also in English: the language follows your browser and can be switched
-  with ES | EN in the header. The guide now includes an introduction video (not bundled in Umbrel: it links to the
-  published website).
+  Opened over plain HTTP, the app now says that encryption needs HTTPS instead of failing with a technical error.
 
 
-  La app, la guía y los ejemplos, también en inglés: se elige según el navegador y se cambia con ES | EN en la
-  cabecera. La guía incluye ahora un vídeo de presentación (en Umbrel no viene incluido: se enlaza la web publicada).
+  Abierta por HTTP, la app avisa de que el cifrado necesita HTTPS en vez de fallar con un error técnico.
 dependencies: []
 path: ""
 defaultUsername: ""
