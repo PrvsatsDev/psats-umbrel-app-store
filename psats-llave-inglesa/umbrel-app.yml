@@ -1,13 +1,31 @@
 manifestVersion: 1
 id: psats-llave-inglesa
 name: llave-inglesa
-tagline: Pon a prueba la custodia de tus bitcoins antes de que lo haga otro
+tagline: Put your bitcoin custody to the test before someone else does
 icon: https://llave-inglesa.vualt.net/logo.svg
 category: bitcoin
-version: "0.3.2"
+version: "0.4.0"
 port: 4580
 description: >-
-  Interface in Spanish only.
+  Offline simulator of Bitcoin custody setups (single-sig, passphrase, multisig). You describe which keys, devices
+  and backups you have, where they are and who knows what, and it works out the cheapest ways to rob you, which loss
+  events would leave you without your funds, how many places you have to visit to sign and whether your heirs would
+  reach the funds, always explaining why. It also builds your wallet descriptor (with the first address to check it),
+  a PDF with its QR code and a letter for your heirs.
+
+
+  Never type in real seed phrases, private keys or passphrases: they are not needed. The app cannot make any network
+  request, and your setup is stored encrypted in the browser.
+
+
+  Requires umbrelOS 2.0 or later: it opens over HTTPS with your Umbrel's certificate (the browser may warn you the
+  first time), because the browser's encryption only works in a secure context.
+
+
+  Interface in English and Spanish (detected from the browser, switchable with ES | EN).
+
+
+  —
 
 
   Simulador offline de esquemas de custodia Bitcoin (single-sig, passphrase, multisig). Describes qué keys,
@@ -32,8 +50,13 @@ support: https://github.com/PrvsatsDev/llave-inglesa/issues
 gallery:
   - https://raw.githubusercontent.com/PrvsatsDev/llave-inglesa/main/docs/img/llave-inglesa.png
 releaseNotes: >-
-  Primera versión en Umbrel. Incluye el descriptor de la cartera (importar, primera dirección, PDF con QR), la carta
-  para los herederos y la penalización por multisig sin descriptor.
+  The app, the guide and the examples are now also in English: the language follows your browser and can be switched
+  with ES | EN in the header. The guide now includes an introduction video (not bundled in Umbrel: it links to the
+  published website).
+
+
+  La app, la guía y los ejemplos, también en inglés: se elige según el navegador y se cambia con ES | EN en la
+  cabecera. La guía incluye ahora un vídeo de presentación (en Umbrel no viene incluido: se enlaza la web publicada).
 dependencies: []
 path: ""
 defaultUsername: ""
