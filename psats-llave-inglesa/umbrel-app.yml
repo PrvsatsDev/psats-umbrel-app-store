@@ -4,7 +4,7 @@ name: llave-inglesa
 tagline: Put your bitcoin custody to the test before someone else does
 icon: https://llave-inglesa.vualt.net/logo.svg
 category: bitcoin
-version: "0.4.1"
+version: "0.5.0"
 port: 4580
 description: >-
   Offline simulator of Bitcoin custody setups (single-sig, passphrase, multisig). You describe which keys, devices
@@ -55,10 +55,17 @@ support: https://github.com/PrvsatsDev/llave-inglesa/issues
 gallery:
   - https://raw.githubusercontent.com/PrvsatsDev/llave-inglesa/main/docs/img/llave-inglesa.png
 releaseNotes: >-
-  Opened over plain HTTP, the app now says that encryption needs HTTPS instead of failing with a technical error.
+  New attacks: malware on the signing computer or phone (which also reveals the descriptor), a tampered device
+  (second-hand, broken seal or unofficial shop) and own entropy below 128 bits. Where each person lives: the wrench
+  attack is now paid per assault. A multisig with no descriptor backup anywhere is a serious issue. A safe inside
+  another location now counts. On the map, Delete removes the selection and items can be dragged between locations.
 
 
-  Abierta por HTTP, la app avisa de que el cifrado necesita HTTPS en vez de fallar con un error técnico.
+  Nuevos ataques: malware en el ordenador o móvil de firma (que además da el descriptor), un dispositivo manipulado
+  (de segunda mano, con el precinto roto o de tienda no oficial) y entropía propia por debajo de 128 bits. Dónde vive
+  cada persona: la llave inglesa se paga por asalto. Un multisig sin ningún backup del descriptor es un problema
+  grave. Una caja fuerte dentro de otra ubicación ya cuenta. En el mapa, Supr elimina lo seleccionado y los objetos se
+  arrastran entre ubicaciones.
 dependencies: []
 path: ""
 defaultUsername: ""
