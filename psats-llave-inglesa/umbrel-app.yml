@@ -4,10 +4,10 @@ name: llave-inglesa
 tagline: Put your bitcoin custody to the test before someone else does
 icon: https://llave-inglesa.vualt.net/logo.svg
 category: bitcoin
-version: "0.5.0"
+version: "0.6.0"
 port: 4580
 description: >-
-  Offline simulator of Bitcoin custody setups (single-sig, passphrase, multisig). You describe which keys, devices
+  Offline simulator of Bitcoin custody setups (single-sig, passphrase, multisig, timelocks). You describe which keys, devices
   and backups you have, where they are and who knows what, and it works out the cheapest ways to rob you, which loss
   events would leave you without your funds, how many places you have to visit to sign and whether your heirs would
   reach the funds, always explaining why. It also builds your wallet descriptor (with the first address to check it),
@@ -30,7 +30,7 @@ description: >-
   —
 
 
-  Simulador offline de esquemas de custodia Bitcoin (single-sig, passphrase, multisig). Describes qué keys,
+  Simulador offline de esquemas de custodia Bitcoin (single-sig, passphrase, multisig, timelocks). Describes qué keys,
   dispositivos y backups tienes, dónde están y quién sabe qué, y calcula las formas más baratas de robarte, qué
   desgracias te dejarían sin fondos, a cuántos sitios tienes que ir para firmar y si tus herederos llegarían a los
   fondos, explicando siempre por qué. También genera el descriptor de tu cartera (con la primera dirección para
@@ -55,17 +55,20 @@ support: https://github.com/PrvsatsDev/llave-inglesa/issues
 gallery:
   - https://raw.githubusercontent.com/PrvsatsDev/llave-inglesa/main/docs/img/llave-inglesa.png
 releaseNotes: >-
-  New attacks: malware on the signing computer or phone (which also reveals the descriptor), a tampered device
-  (second-hand, broken seal or unofficial shop) and own entropy below 128 bits. Where each person lives: the wrench
-  attack is now paid per assault. A multisig with no descriptor backup anywhere is a serious issue. A safe inside
-  another location now counts. On the map, Delete removes the selection and items can be dragged between locations.
+  Timelocks: a key or a whole path can require the coins to stay unmoved for a while. Templates for simple
+  inheritance, decaying and expanding multisig (Liana's names), a free tree editor for anything else, with a plain
+  summary of the ways to spend, and how often you move the coins. The engine counts the delay instead of the loss,
+  the wait for heirs and the cost of renewing. The descriptor is wsh(miniscript), checked against Bitcoin Core's
+  vectors and limits, and imports Liana descriptors (keys reused with <2;3>). The catalog says which devices sign
+  Miniscript.
 
 
-  Nuevos ataques: malware en el ordenador o móvil de firma (que además da el descriptor), un dispositivo manipulado
-  (de segunda mano, con el precinto roto o de tienda no oficial) y entropía propia por debajo de 128 bits. Dónde vive
-  cada persona: la llave inglesa se paga por asalto. Un multisig sin ningún backup del descriptor es un problema
-  grave. Una caja fuerte dentro de otra ubicación ya cuenta. En el mapa, Supr elimina lo seleccionado y los objetos se
-  arrastran entre ubicaciones.
+  Timelocks: una key o una vía entera puede exigir que las monedas lleven un tiempo sin moverse. Plantillas de
+  herencia simple, multisig decreciente y ampliable (los nombres de Liana), un editor libre del árbol para lo demás,
+  con un resumen en llano de las formas de gastar, y cada cuánto mueves las monedas. El motor cuenta el retraso en
+  vez de la pérdida, la espera de los herederos y lo que cuesta renovar. El descriptor es wsh(miniscript),
+  comprobado con los vectores y límites de Bitcoin Core, e importa los descriptores de Liana (keys repetidas con
+  <2;3>). El catálogo dice qué dispositivos firman Miniscript.
 dependencies: []
 path: ""
 defaultUsername: ""
