@@ -4,7 +4,7 @@ name: llave-inglesa
 tagline: Put your bitcoin custody to the test before someone else does
 icon: https://llave-inglesa.vualt.net/logo.svg
 category: bitcoin
-version: "0.6.0"
+version: "0.6.1"
 port: 4580
 description: >-
   Offline simulator of Bitcoin custody setups (single-sig, passphrase, multisig, timelocks). You describe which keys, devices
@@ -55,20 +55,14 @@ support: https://github.com/PrvsatsDev/llave-inglesa/issues
 gallery:
   - https://raw.githubusercontent.com/PrvsatsDev/llave-inglesa/main/docs/img/llave-inglesa.png
 releaseNotes: >-
-  Timelocks: a key or a whole path can require the coins to stay unmoved for a while. Templates for simple
-  inheritance, decaying and expanding multisig (Liana's names), a free tree editor for anything else, with a plain
-  summary of the ways to spend, and how often you move the coins. The engine counts the delay instead of the loss,
-  the wait for heirs and the cost of renewing. The descriptor is wsh(miniscript), checked against Bitcoin Core's
-  vectors and limits, and imports Liana descriptors (keys reused with <2;3>). The catalog says which devices sign
-  Miniscript.
+  Privacy in the browser: the page is never sent to the browser's translator, and text fields skip spell checkers
+  and autocorrect, so your setup does not leave the device that way. The guide explains it under «Your browser».
+  Opening a file with absurdly deep nesting no longer hangs the app, and a damaged file now says so.
 
 
-  Timelocks: una key o una vía entera puede exigir que las monedas lleven un tiempo sin moverse. Plantillas de
-  herencia simple, multisig decreciente y ampliable (los nombres de Liana), un editor libre del árbol para lo demás,
-  con un resumen en llano de las formas de gastar, y cada cuánto mueves las monedas. El motor cuenta el retraso en
-  vez de la pérdida, la espera de los herederos y lo que cuesta renovar. El descriptor es wsh(miniscript),
-  comprobado con los vectores y límites de Bitcoin Core, e importa los descriptores de Liana (keys repetidas con
-  <2;3>). El catálogo dice qué dispositivos firman Miniscript.
+  Privacidad en el navegador: la página nunca se manda al traductor del navegador, y los campos de texto no pasan
+  por correctores ni autocorrección, así que tu esquema no sale del equipo por ahí. La guía lo explica en «Tu
+  navegador». Abrir un fichero anidado sin fin ya no bloquea la app, y un fichero dañado ahora avisa.
 dependencies: []
 path: ""
 defaultUsername: ""
