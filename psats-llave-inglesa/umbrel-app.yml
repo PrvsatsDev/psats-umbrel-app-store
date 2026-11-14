@@ -4,10 +4,10 @@ name: llave-inglesa
 tagline: Put your bitcoin custody to the test before someone else does
 icon: https://llave-inglesa.vualt.net/logo.svg
 category: bitcoin
-version: "0.6.1"
+version: "0.7.0"
 port: 4580
 description: >-
-  Offline simulator of Bitcoin custody setups (single-sig, passphrase, multisig, timelocks). You describe which keys, devices
+  Offline simulator of Bitcoin custody setups (single-sig, passphrase, multisig, timelocks, FROST and Shamir split keys, Taproot). You describe which keys, devices
   and backups you have, where they are and who knows what, and it works out the cheapest ways to rob you, which loss
   events would leave you without your funds, how many places you have to visit to sign and whether your heirs would
   reach the funds, always explaining why. It also builds your wallet descriptor (with the first address to check it),
@@ -30,7 +30,7 @@ description: >-
   —
 
 
-  Simulador offline de esquemas de custodia Bitcoin (single-sig, passphrase, multisig, timelocks). Describes qué keys,
+  Simulador offline de esquemas de custodia Bitcoin (single-sig, passphrase, multisig, timelocks, keys repartidas con FROST y Shamir, Taproot). Describes qué keys,
   dispositivos y backups tienes, dónde están y quién sabe qué, y calcula las formas más baratas de robarte, qué
   desgracias te dejarían sin fondos, a cuántos sitios tienes que ir para firmar y si tus herederos llegarían a los
   fondos, explicando siempre por qué. También genera el descriptor de tu cartera (con la primera dirección para
@@ -55,14 +55,18 @@ support: https://github.com/PrvsatsDev/llave-inglesa/issues
 gallery:
   - https://raw.githubusercontent.com/PrvsatsDev/llave-inglesa/main/docs/img/llave-inglesa.png
 releaseNotes: >-
-  Privacy in the browser: the page is never sent to the browser's translator, and text fields skip spell checkers
-  and autocorrect, so your setup does not leave the device that way. The guide explains it under «Your browser».
-  Opening a file with absurdly deep nesting no longer hangs the app, and a damaged file now says so.
+  Split keys: model a key whose shares are spread across devices and backups, either FROST (Frostsnap: each device
+  signs with its share and the full key never exists) or Shamir (Trezor: shares that rebuild the seed). The engine
+  knows how many shares are enough, where each one lives, and warns when they no longer reach the threshold.
+  Taproot: choose the address type, with a quantum-computer note. Redesigned panel: a fixed rail with the sections
+  and notes, section headers with icons and an index of the setup.
 
 
-  Privacidad en el navegador: la página nunca se manda al traductor del navegador, y los campos de texto no pasan
-  por correctores ni autocorrección, así que tu esquema no sale del equipo por ahí. La guía lo explica en «Tu
-  navegador». Abrir un fichero anidado sin fin ya no bloquea la app, y un fichero dañado ahora avisa.
+  Keys repartidas: modela una key cuyas shares están repartidas entre dispositivos y backups, ya sea FROST
+  (Frostsnap: cada dispositivo firma con su share y la key entera nunca existe) o Shamir (Trezor: shares que
+  reconstruyen la semilla). El motor sabe cuántas shares bastan, dónde está cada una y avisa cuando ya no llegan al
+  umbral. Taproot: elige el tipo de dirección, con un aviso sobre el ordenador cuántico. Panel rediseñado: raíl fijo
+  con las secciones y las notas, cabeceras de sección con icono e índice del esquema.
 dependencies: []
 path: ""
 defaultUsername: ""
